@@ -200,3 +200,4 @@ class StructDefType extends Type {
         return "struct";
     }
 }
+

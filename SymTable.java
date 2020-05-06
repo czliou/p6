@@ -2,6 +2,7 @@ import java.util.*;
 
 public class SymTable {
 
+  public String currFunc = "main";
   private List<HashMap<String, Sym>> list;
 
   public SymTable() {
@@ -74,5 +75,9 @@ public class SymTable {
       System.out.println(symTab.toString());
     }
     System.out.println();
+  }
+
+  public int getSize(){
+    return list.size();
   }
 }

@@ -6,6 +6,8 @@ import java.util.*;
  */
 public class Sym {
     private Type type;
+    private int offset = 0;
+    private boolean global = false;
 
     public Sym(Type type) {
         this.type = type;
@@ -18,6 +20,22 @@ public class Sym {
     public String toString() {
         return type.toString();
     }
+
+  	public void setOffset(int offset){
+  		this.offset = offset;
+  	}
+
+  	public int getOffset(){
+  		return this.offset;
+  	}
+
+  	public void setGlobal(){
+  		this.global = true;
+  	}
+
+  	public boolean isGlobal(){
+  		return this.global;
+  	}
 }
 
 /**
@@ -109,3 +127,4 @@ class StructDefSym extends Sym {
         return symTab;
     }
 }
+

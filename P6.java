@@ -155,9 +155,9 @@ public class P6 {
 			return P6.RESULT_TYPE_ERROR;
 		}
 
-		//////////////////////////
-		// TODO: Calling codeGen   //
-		//////////////////////////
+		Codegen.p = outFile;
+		astRoot.codeGen();
+		Codegen.p.close();
 
 		return P6.RESULT_CORRECT;
 	}
@@ -216,3 +216,4 @@ public class P6 {
 		instance.run();
 	}
 }
+

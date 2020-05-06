@@ -56,7 +56,8 @@ EmptySymTableException.class: EmptySymTableException.java
 #
 test:
 	java -cp $(CP) P6 test.wumbo test.s
-
+	java -cp $(CP) P6 test2.wumbo test2.s
+	java -cp $(CP) P6 error.wumbo errorOut.s
 ###
 # clean
 ###
